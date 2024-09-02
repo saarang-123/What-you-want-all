@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicle Effect test</title>
+    <style>
+        body,
+html {
+	margin: 0;
+	overflow: hidden;
+	min-height: 100vh;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#myElement {
+	width: 50px;
+	height: 50px;
+	background: #ccc;
+}
+
+    </style>
+</head>
+<body>
+
+
+    <div id="myElement"></div>
+
+<script>
+	window.onload = () => {
+		new ParticleFirework({
+			elementId: 'myElement',
+			duration: 450,
+			delay: 250,
+			numParticles: 200,
+			colors: ['#ff0000', '#00ff00', '#0000ff'],
+			size: 5,
+			shape: 'square', // square, triangle, circle
+			spread: 3 
+		});
+	};
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
